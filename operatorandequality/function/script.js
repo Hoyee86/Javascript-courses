@@ -133,6 +133,116 @@ console.log(prime)
 
 
 
+// BLOCK SCOPE
+
+const religion = "christian"
+
+const exampleThree = () => {
+    const name = "chima"
+    if(true){
+        // block scope
+        const schoolName = "LASU"
+
+        console.log(`${name} is a ${religion} and goes to ${schoolName}`)
+    }
+}
+exampleThree()
+
+
+// HOISTING
+
+// const a = 2 // something here is similar to func expression n and arrrow func but its not similar 
+
+  // CLOSURE // The scope regarding a function inside a function
+
+
+
+  const outerFunction = () => {
+    const ben = 5
+
+
+    const innerFunction = () => {
+        const man = 7
+
+        return ben + man
+    }
+
+   const final = innerFunction()
+   console.log(final * 2)
+      
+  }
+
+  outerFunction()
+
+
+  // class work , a function that carries a function with the condition that if true, return the
+  // final answer of the condition * 4, and in the main function , the final answer of the
+  // previos function should be divided by 2
+
+
+  // SOLUTION
+
+   //Solution- Class-Exercise
+
+   const FirstFunc = () => {
+    const div = 2
+
+    const secondFunc = () => {
+
+        let certainNumber
+        const mult = 4
+
+        if (true){
+            certainNumber = 5
+        }
+
+        const ans = certainNumber * mult
+        return ans
+    }
+
+    const initialAnswer = secondFunc()
+
+    const finalAnswer = initialAnswer / div
+
+    console.log(finalAnswer)
+}
+
+FirstFunc()
+
+
+// ANOTHER SYSTEM FOR CLASS WORK
+
+const mainFunction = () => {
+    const certainNumber = 8;
+    const mainNum = 2;
+
+    const childFunction = () => {
+        const cdnNumber = 4;
+
+        if (certainNumber) {
+            return certainNumber * cdnNumber;
+        }
+
+    }
+
+    return childFunction() / mainNum;
+
+}
+
+const finalAnswer = mainFunction();
+
+console.log(finalAnswer);
+
+
+
+    
+  
+
+
+
+
+
+
 
 
 
