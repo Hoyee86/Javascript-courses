@@ -75,7 +75,7 @@ const cohorts = [
 
 
 
-    // POP METHOD
+    // POP METHOD : This method is used to remove last data from an array
 
     const numbers = [3, 4, 5, 6, 7, 8, 9];
     console.log(numbers)
@@ -84,6 +84,21 @@ const cohorts = [
     console.log(popped);
     console.log(numbers)
 
+    // MAP METHOD
+    const  number = [1, 2, 3, 4, 5, 6];
+    console.log(number)
+    const numberDuble = number.map(double)
+    const numberMuitiply = number.map(multiply)
 
-   
+    function double(value, index, array) {
+        return value * 2
+    }
+
+    function multiply(value, index, array) {
+        return value * index
+    }
+
+    console.log(numberDuble)
+    console.log(numberMuitiply)
+    
     
