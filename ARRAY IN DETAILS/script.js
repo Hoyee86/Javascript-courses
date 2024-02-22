@@ -84,23 +84,6 @@ const cohorts = [
     console.log(popped);
     console.log(numbers)
 
-    //***** MAP METHOD**************
-    const  number = [1, 2, 3, 4, 5, 6];
-    console.log(number)
-    const numberDuble = number.map(double)
-    const numberMuitiply = number.map(multiply)
-
-    function double(value, index, array) {
-        return value * 2
-    }
-
-    function multiply(value, index, array) {
-        return value * index
-    }
-
-    console.log(numberDuble)
-    console.log(numberMuitiply)
-
 
      //***** SHIFT METHOD () ************** : This is used to remove first
      // element of the an array
@@ -263,8 +246,76 @@ let totalVal = 0;
 const trans = [42, 45, 26, 4, 13, 16]
 
 trans.forEach((tran)=>{
-    console.log(totalVal, (tran += totalVal), )
+    console.log(totalVal, (totalVal += tran), tran)
 })
+
+
+console.log(totalVal);
+
+
+
+// EXAMPLE 4
+_names .forEach((name)=> console.log(`Congratulation ${name} you una they smoke igbo`))
+
+
+
+ //***** MAP METHOD************** : this create a new array populated with the resulting
+ // of calling a provided function on every element in the calling array
+   
+
+ const  number = [1, 2, 3, 4, 5, 6];
+    console.log(number)
+    const numberDuble = number.map(double)
+    const numberMuitiply = number.map(multiply)
+
+    function double(value, index, array) {
+        return value * 2
+    }
+
+    function multiply(value, index, array) {
+        return value * index
+    }
+
+    console.log(numberDuble)
+    console.log(numberMuitiply)
+
+
+    // EXAMPLES 2
+
+    const inventory = [
+        {name: "Rice", price: 4000},
+        {name: "Beans", price: 4000},
+        {name: "Semo", price: 4000},
+        {name: "Yam", price: 4000},
+        {name: "Garri", price: 4000}
+    ];
+
+    // inventory.map((value)=>{
+    //     console.log(value.name)
+    // })
+   
+        const price = inventory.map((value) => {
+            return value.price
+        });
+        console.log(price)
+        
+        // const name = inventory.map((value) => {
+        //     return value.name
+        // });
+        // console.log(name);
+        
+        const commodities = inventory.map((commodity) => commodity.name)
+        console.log(commodities);
+        
+        let doublek = [2, 3, 4, 5, 6, 7];
+        
+        let $double = doublek.map((numb) => {
+            return numb * 2
+        });
+        console.log($double)
+
+
+
 
 
 
