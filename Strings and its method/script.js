@@ -87,7 +87,7 @@ console.log(final)
  console.log(exampleString.slice())
 
 
- // SLIP METHOD
+ // SPLIT METHOD
 
  const sentence1 = "The quick brown for jumped over the lasy dog";
  console.log(sentence1.split(' '));
