@@ -479,22 +479,36 @@ studentAboveFromSix.forEach((student) => {
 })
 
 
+/// ARRAY SOME AND EVERY(): This methode is used to check if any array
+// element pass a text (provided)
+
+const box = [1, 2, 3, 4, 5, 6, 7]
+
+// some checks if some of the propertues in any arry meets a particular condition
+console.log(box.some((el) =>{return el < 8}))
+
+// Every checks if all of the properties in an array meets a particular condition
+
+console.log(box.every((el) =>{return el > 4}))
 
 
+// ARRAY REDUCE
+
+//Loop through the array and return the sum of the array.
+// it take two properties: a callback function and initial value.
+/// the call back function taketwo
+// parameters which are accumulatorand value
+
+const boxes = [1,2,3,4,5,6,7,8,9,10]
+
+const answer = boxes.reduce((accumulator, value) =>{
+    return accumulator + value
+}, 0)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 0+1 = 1=> accumulator
+// 1+2 = 3=> accumulator
+// 3+3 = 6=> accumulator
+// 6+4 = 10=> accumulator
+console.log(answer)
 
