@@ -253,3 +253,28 @@ const otherAnimals = animals
 animals.push("Goat");
 console.log(animals)
 console.log(otherAnimals)
+
+
+// copying object
+
+const data = {
+    firstName: "Zainab",
+    lastNmae:  "Abdullahi",  
+}
+const otherData = data;
+console.log(data === otherData)
+
+// EQUALITY
+
+const person1 = {
+    firstName: "Soliu"
+}
+
+const otherPerson1 = {
+    firstName: "Soliu"
+}
+
+console.log(person1 !== otherPerson1) // false
+
+const otherPerson3 = person1
+console.log(person1 !== otherPerson3)
