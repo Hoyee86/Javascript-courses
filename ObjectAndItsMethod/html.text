@@ -7,3 +7,17 @@ in which case the property is known as a method.
 Objects in JavaScript, just as in many other 
 programming languages, can be 
 compared to objects in real life.
+
+
+FOREACH METHOD: JavaScript?
+forEach() method is used to execute the function which is taken as a
+ parameter and applied for each value in the set, in insertion order.
+ Parameter: Callback function:
+ The function will be executed for each value and it takes three arguments.
+  Value, Key: Value should be the current element that is processed.
+
+  When to use forEach JavaScript?
+You should use a forEach loop when you want to do something for each element of an array,
+ array you don't want to edit. If you want to perform something on each element of an array,
+  you would use the map method. Example of forEach :
+   You want to add 1 to a variable for each odd element of an array.
