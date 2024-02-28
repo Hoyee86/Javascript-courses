@@ -48,6 +48,8 @@ const pet = {
     }
 }
 
+console.log(pet.petName)
+
 pet.petSound()
 
 //**** Another Example */

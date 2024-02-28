@@ -37,8 +37,8 @@
  const answer = division(4)
  console.log(answer)
 
- const squre2 = number => {return number * number}
- const squre3 = number => number * number
+ const squre2 = (number) => {return number * number}
+ const squre3 = (number )=> number * number
 
 
 
