@@ -188,18 +188,114 @@ let person2 =  new personTwo("Azeez", "Abdullahi")
 
     // SOLUTION
      
-    const Community = class Area1 {
+    const RectShape = class Rectangle {
         constructor(length, breadth) {
             this.length = length;
             this.breadth = breadth;
         }
-        get recshape() {
-            return this.answerEr()
+        get area() {
+            return this.calc()
         }
-        answerEr(){
+        calc(){
             return {area: this.length  *  this.breadth}
         }
     }
 
-    const finalResult = new Community(25, 15)
-    console.log(finalResult.recshape)
+    const square = new RectShape(25, 15)
+    console.log(square.area)
+
+
+    // difference between const and class
+
+    // detailOne = {
+    //       name: "Class Captain",
+    //       age: 540,
+    //       isBlack: false
+    // }
+    // detailTwo = {
+    //       name: "Bbab Oloye",
+    //       age: 640,
+    //       isBlack: true
+    // }
+
+    // const getDetailsOne = new detailOne()
+    // console.log(getDetailsOne)
+
+    class Detail{
+        constructor(name, age, isPretty){
+             this.name = name;
+             this.age = age;
+             this.isPretty = isPretty;
+        }
+    }
+
+    const detailOne = new Detail("Bash", 12, false)
+
+    const detailTwo = new Detail("Nafi", 10, false)
+
+    const detailThree = new Detail("Bode", 2, false) 
+
+    const result = [detailOne, detailTwo]
+    result.push(detailThree)
+    result.shift(detailOne)
+    console.log(result)
+
+
+
+    // another example
+
+    const createPerson = (name, age, isHand) => {
+         const userSchema = {
+            name, age, isHand
+         }
+         return userSchema
+    }
+
+    const personCreate = createPerson("Bode", 45, true)
+
+    const personCreate2 = createPerson("Soliu", 450, true)
+
+    console.log(personCreate)
+    console.log(personCreate2)
+
+
+    // INHERITANCE
+
+    class Animal {
+        alive = true
+
+        isBeautiful = 'This animal is beautiful'
+
+        eat() {
+            console.log(`This ${this.name} can eat`)
+        }
+         sleep() {
+            console.log(`This ${this.name} can sleep`)
+        }
+
+    }
+
+
+    class Rabbit extends Animal {
+         name = "Rabbit"
+
+         run() {
+            console.log(`This ${this.name} can run`)
+         }
+        
+    }
+    class Goat extends Animal {
+        name = "goat"
+    }
+
+    const rabbit = new Rabbit ()
+    rabbit.eat()
+    console.log(rabbit)
+
+
+
+    const goat = new Goat()
+    goat.eat()
+    console.log(goat.isbeautiful)
+    console.log(goat)
+    
