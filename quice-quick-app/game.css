@@ -1,19 +1,19 @@
-.choice-container {
+ .choice-container {
     display: flex;
     margin-bottom: 0.5rem;
     width: 100%;
     font-size: 1.8rem;
     background-color: #ffffff;
     border: 0.1rem solid rgb(86, 165, 235, 0.25);
-}
+ } 
 
 
-.choice-container:hover{
+ .choice-container:hover{
     box-shadow: 0 0.4rex 1.4rem 0 rgb(86, 165, 235, 0.25);
     transform: translate(-0.1rem);
     transition: transform 150ms;
     cursor: pointer;
-}
+ }
 
 
 .choice-prefix {
@@ -38,7 +38,7 @@
 
 
 /* HUD */
-#hud {
+ #hud {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,7 +47,7 @@
 .hud-prefix {
     text-align: center;
     font-size: 2rem;
-}
+} 
 
 .hud-main-tex {
     text-align: center;

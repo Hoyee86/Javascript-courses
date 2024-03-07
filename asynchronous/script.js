@@ -8,92 +8,92 @@
 
 // Synchrounous- Javascript: code execution occurs line-by-line and the tasks are completed without delay
 
-// const functionOne = () => {
-//      console.log("function One")
+const functionOne = () => {
+     console.log("function One")
 
-//      functionTwo();
-//      console.log("You are a competent tutor")
-// }
-
-
-// const functionTwo = () => {
-//    setTimeout(() => console.log("function Two"), 2000)
-// }
+     functionTwo();
+     console.log("You are a competent tutor")
+}
 
 
-// functionOne()
+const functionTwo = () => {
+   setTimeout(() => console.log("function Two"), 2000)
+}
+
+
+functionOne()
 
 
 // CALL BACK: FETCHING DATA
 
 
-// const fetchUser = (username) => {
-//    setTimeout(() => {
-//       return{user: username}
-//    }, 2000);
-// }
+const fetchUser = (username) => {
+   setTimeout(() => {
+      return{user: username}
+   }, 2000);
+}
 
-// const user = fetchUser("test")
-// console.log(user)
-
-
-// //****** Example Two by using Callback function */
+const user = fetchUser("test")
+console.log(user)
 
 
-
-// const fetchUserOne = (name, callback) => {
-//     setTimeout(() => {
-//         console.log("Now we have the user")
-//         callback({user: name})
-//     }, 2000);
-// }
+//****** Example Two by using Callback function */
 
 
 
-// const user2 = fetchUserOne("Abdullahi", (user2) => {
-//     console.log(user2)
-// })
+const fetchUserOne = (name, callback) => {
+    setTimeout(() => {
+        console.log("Now we have the user")
+        callback({user: name})
+    }, 2000);
+}
+
+
+
+const user2 = fetchUserOne("Abdullahi", (user2) => {
+    console.log(user2)
+})
 
 
 // callback Hell:
 
-// const fetchUserTwo = (username, callback) => {
-//       setTimeout(() => {
-//         console.log("Now have the user")
-//         callback({username})
-//       }, 2000);
-// }
+const fetchUserTwo = (username, callback) => {
+      setTimeout(() => {
+        console.log("Now have the user")
+        callback({username})
+      }, 2000);
+}
 
 
-// const fetchUserPhotos = (username, callback) => {
-//      setTimeout(() => {
-//          console.log(`Now we have the photos for ${username}`)
-//          callback(["photo1", "photo2"])
-//      }, 2000);
-// }
+const fetchUserPhotos = (username, callback) => {
+     setTimeout(() => {
+         console.log(`Now we have the photos for ${username}`)
+         callback(["photo1", "photo2"])
+     }, 2000);
+}
 
 
 
-// const fetchUserPhotosDetails = (photo, callback) => {
-//       setTimeout(() => {
-//          console.log(`Now have the photo details ${photo}`)
-//          callback("detail")
-//       }, 2000);
-// }
+const fetchUserPhotosDetails = (photo, callback) => {
+      setTimeout(() => {
+         console.log(`Now have the photo details ${photo}`)
+         callback("detail")
+      }, 2000);
+}
 
-// const user3 = fetchUserTwo("Michael", (hoyee) =>{
-//     console.log(`Your name is ${hoyee.username}`)
+const user3 = fetchUserTwo("Michael", (hoyee) =>{
+    console.log(`Your name is ${hoyee.username}`)
 
-//     fetchUserPhotos(hoyee.username, (userPhoto) =>{
-//         console.log(`You photos are: ${userPhoto}`)
+    fetchUserPhotos(hoyee.username, (userPhoto) =>{
+        console.log(`You photos are: ${userPhoto}`)
 
-//         fetchUserPhotosDetails(userPhoto[0], (detail) => {
-//             console.log(`Your photo details are: ${detail}`)
-//         });
+        fetchUserPhotosDetails(userPhoto[0], (detail) => {
+            console.log(`Your photo details are: ${detail}`)
+        });
 
-//     });
+    });
 
-// });
+});
 
 
 
@@ -117,22 +117,22 @@
 
 
 // PROMISE(): This method takes a callback function as an argument and executes the callback function
-// function when the promise is resolved or reject and it two keywords
-// which .then() and .catch() methods that are used for success and error 
+// function when the promise is resolved or reject and it has two keywords
+// which are .then() and .catch() methods that are used for success and error 
 // message.
 
-// const promise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         console.log("Now we are in promise");
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("Now we are in promise");
 
-//         resolve({username: "Bode"})
-//         // reject("User not found")
-//     }, 5000);
-// })
+        resolve({username: "Abdul-Lateef"})
+        reject("User not found")
+    }, 5000);
+})
 
-// promise
-// .then((user) => console.log(user.username))
-// .catch((error) => console.log(error))
+promise
+.then((user) => console.log(user.username))
+.catch((error) => console.log(error))
 
 
 // const fetchUser = (username) => {
@@ -222,11 +222,12 @@ const getAllUsername = async () => {
      console.log(fetchJson)
 
      const username = fetchJson.map((user) => {
-
+          return user.address.street
      })
-    
- 
+    console.log(username)
 }
+
+getAllUsername()
 
 
    try{
@@ -285,13 +286,6 @@ const getAllUsername = async () => {
    })
 
 
-
-//    const getName = async () => {
-//       const dell = await fetch('https://jsonplaceholder.typicode.com/users')
-//       if()
-//    }
-
-
 const fetchSingleData = async () => {
      try{
           const response = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -345,7 +339,7 @@ fetchAllData();
 const fetchNestDta = async () => {
 
     try{
-        console.log("username")
+        // console.log("username")
    const response = await fetch('https://jsonplaceholder.typicode.com/users'); 
     
     if(!response.ok){
@@ -396,7 +390,33 @@ console.log(mappedData)
 
 
    
+// Mathematical method:
 
+
+const roundNub = Math.round(4.4);
+console.log(roundNub);
+
+
+const ceil = Math.ceil(4.7);
+console.log(ceil);
+
+const floor = Math.floor(-4.7);
+console.log(floor)
+
+
+
+const sign = Math.sign(6, 2)
+console.log(sign)
+
+const pow = Math.pow(8, 2)
+console.log(pow)
+
+const square = Math.sqrt(81)
+console.log(square)
+
+
+const absolute = Math.abs(-4.7)
+console.log(absolute)
 
 
 

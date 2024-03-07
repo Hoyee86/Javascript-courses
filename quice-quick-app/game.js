@@ -60,13 +60,13 @@ const MAX_QUESTIONS = 3;
 
 const getNweQuestion = () => {
     questionCounter++;
-    progressTxt.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+    progressTxt.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     progressBarFull.style.width = `${questionCounter / MAX_QUESTIONS * 100}%`
 
     const questionIndex = Math.floor(Math.random() * availableQuestion.length)
     currenrQuestion = availableQuestion[questionIndex]
-    question.innerText = currenrQuestion.question
-    // console.log(currenrQuestion)
+    question.innerText = currenrQuestion.
+    console.log(currenrQuestion)
 
 
     choices.forEach((choice) => {
@@ -74,6 +74,16 @@ const getNweQuestion = () => {
         choice.innerText = currenrQuestion["choice" + number]
     })
 
+    availableQuestion.splice(questionIndex, 1);
+    acceptingAnswer = true;
+
 }
+
+
+choices.forEach((choice) =>{
+  choice.addEventListener("click", (e) => {
+      e.preventDefault
+  })
+})
 
 startGame();
